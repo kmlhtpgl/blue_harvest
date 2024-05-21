@@ -1,7 +1,7 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/kmlhtpgl/blue_harvest.git
-RUN cd vprofile-project && git checkout docker && mvn install
+RUN cd blue-blue_harvest && git checkout docker && mvn install
 LABEL "Project"="blue-harvest"
 LABEL "Author"="Kemal"
 FROM tomcat:9-jre11
